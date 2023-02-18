@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app!</title>
+    <meta name="description" content="description"/>
+    <meta name="author" content="author" />
+    <meta name="keywords" content="keywords" />
+  </head>
+  <body>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="Enter city" name="city"/>
+    <button type="submit">Enter</button>
+  </form>
+  <h1>Temperature: {{ temp }}<sup>o</sup></h1>
+  <h1>Country code: {{ code }}</h1>
+  <h1>Wind: {{ wind }}M/s</h1>
+  <h1>Description: {{ description }}</h1>
+  <h1>Day: {{ day }}</h1>
+  <h1>City: {{ city }}</h1>
+  <img src="http://openweathermap.org/img/w/{{icon}}.png" width="100px">
+
+  </body>
+</html>
+
